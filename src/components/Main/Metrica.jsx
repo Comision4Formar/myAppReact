@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Metrica(props) {
     return (
@@ -20,4 +21,15 @@ function Metrica(props) {
     )
 }
 
+Metrica.propTypes = {
+    color : PropTypes.string.isRequired,
+    title : PropTypes.string.isRequired,
+    value : PropTypes.number.isRequired,
+    icon : PropTypes.string.isRequired
+}
+
+Metrica.defaultProps = {
+    color : 'danger',
+    title : 'SIN DEFINIR'
+}
 export default Metrica

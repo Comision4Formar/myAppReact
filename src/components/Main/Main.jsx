@@ -10,25 +10,18 @@ function Main() {
         {
             color : 'primary',
             title : 'Products in Data Base',
-            value : '135',
+            value : 135,
             icon : 'fa-clipboard-list'
         },
         {
             color : 'success',
             title : 'Amount in products',
-            value : '$ 546.456',
+            value : 546.456,
             icon : 'fa-dollar-sign'
         },
         {
             color : 'warning',
-            title : 'Users quantity',
-            value : '38',
-            icon : 'fa-user-check'
-        },
-        {
-            color : 'danger',
-            title : 'bajas',
-            value : '3',
+            value : 38,
             icon : 'fa-user-check'
         }
     ]
@@ -48,8 +41,9 @@ function Main() {
                 <div className="row">
 
                 {
-                   data.map(item => 
+                   data.map((item,index) => 
                     <Metrica
+                        key = {index}
                         color = {item.color}
                         title = {item.title}
                         value = {item.value}
@@ -57,7 +51,7 @@ function Main() {
                     />
                     ) 
                 }
-               
+
                 </div>
 
                 <div className="row">
@@ -65,7 +59,7 @@ function Main() {
                 <DataBase/>
         
                 <Categories/>
-                
+
                 </div>
             </div>
 

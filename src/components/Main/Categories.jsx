@@ -14,14 +14,14 @@ function Categories() {
                     <div className="row">
 
                     {
-                        data.map(item =>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="card bg-info text-white shadow">
-                                        <div className="card-body">
-                                            {item}
-                                        </div>
+                        data.map((item,index) =>
+                            <div className="col-lg-6 mb-4" key={index}>
+                                <div className="card bg-info text-white shadow">
+                                    <div className="card-body">
+                                        {item}
                                     </div>
                                 </div>
+                            </div>
                         )
                     }
                     </div>
